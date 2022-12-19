@@ -20,8 +20,6 @@ class Problem1 {
         int maxCrong = getMax(crong);
         answer = compare(maxPobi, maxCrong);
 
-        System.out.println(answer);
-
         return answer;
     }
 
@@ -49,8 +47,6 @@ class Problem1 {
     }
 
     public static int compare(final int pobi, final int crong) {
-        System.out.println("pobi : " + pobi + ", crong : " + crong);
-
         if (pobi > crong) {
             return 1;
         }
