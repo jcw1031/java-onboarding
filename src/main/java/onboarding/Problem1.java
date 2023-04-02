@@ -8,6 +8,8 @@ class Problem1 {
     public static final int FIRST_PAGE = 1;
     public static final int EXCEPTION = -1;
     public static final int SIZE = 2;
+    public static final int LEFT_PAGE_INDEX = 0;
+    public static final int RIGHT_PAGE_INDEX = 1;
 
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer;
@@ -24,10 +26,10 @@ class Problem1 {
     }
 
     public static int validate(final List<Integer> pobi, final List<Integer> crong) {
-        int pobiLeftPage = pobi.get(0);
-        int pobiRightPage = pobi.get(1);
-        int crongLeftPage = crong.get(0);
-        int crongRightPage = crong.get(1);
+        int pobiLeftPage = pobi.get(LEFT_PAGE_INDEX);
+        int pobiRightPage = pobi.get(RIGHT_PAGE_INDEX);
+        int crongLeftPage = crong.get(LEFT_PAGE_INDEX);
+        int crongRightPage = crong.get(RIGHT_PAGE_INDEX);
 
         if ((pobiRightPage - pobiLeftPage) != 1 || (crongRightPage - crongLeftPage) != 1) {
             return EXCEPTION;
